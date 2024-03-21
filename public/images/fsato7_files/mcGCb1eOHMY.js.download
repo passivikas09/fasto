@@ -1,0 +1,4 @@
+;/*FB_PKG_DELIM*/
+
+__d("isSSR",["ExecutionEnvironment","XPlatReactEnvironment"],(function(a,b,c,d,e,f,g){"use strict";var h;a=d("XPlatReactEnvironment").isWeb()&&!(h||(h=c("ExecutionEnvironment"))).canUseDOM;b=a;g["default"]=b}),98);
+__d("VideoPlayerConnectionQuality",["isSSR"],(function(a,b,c,d,e,f,g){"use strict";var h={POOR:"POOR",MODERATE:"MODERATE",GOOD:"GOOD",EXCELLENT:"EXCELLENT"},i=[{bandwidth:5e5,connectionQuality:h.POOR},{bandwidth:2e6,connectionQuality:h.MODERATE},{bandwidth:1e7,connectionQuality:h.GOOD}],j=100,k=null,l=null;a=function(a){if(c("isSSR"))return"MODERATE";if(k!==null&&l!==null&&k>=Date.now()-j)return l;a=a();var b=null;if(a!=null)for(var d=0;d<i.length;d++)if(a<i[d].bandwidth){b=i[d].connectionQuality;break}b===null&&(b=h.EXCELLENT);k=Date.now();l=b;return b};g.evaluate=a}),98);
